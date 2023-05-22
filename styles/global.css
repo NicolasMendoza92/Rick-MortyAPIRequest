@@ -34,3 +34,56 @@ body {
   color: #999;
   font-size: 0.75rem;
 }
+
+.button {
+  background-color: blue;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-weight: bold;
+}
+
+.title {
+  font-weight: normal;
+  font-size: 3rem;
+  margin: 32px 0;
+  line-height: 1;
+}
+
+.title a {
+  color: #0070f3;
+  text-decoration: none;
+}
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+/* Character styles  */
+
+.profile {
+  display: flex;
+  margin-top: 2em;
+}
+@media (max-width: 600px) {
+  .profile {
+    flex-direction: column;
+  }
+}
+.profile-image {
+  margin-right: 2em;
+}
+@media (max-width: 600px) {
+  .profile-image {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
