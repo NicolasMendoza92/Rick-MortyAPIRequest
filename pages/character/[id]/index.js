@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Link from "next/link";
 const defaultEndpoint = `https://rickandmortyapi.com/api/character/`;
 
@@ -19,15 +18,8 @@ export default function Character({ data }) {
   const {name, image, gender, location, origin, species, status } = data;
 
   return (
-    <div className="container d-flex justify-content-center m-3">
-      <Head>
-        <title>{ name }</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <h1 className="title">{ name }</h1>
-
+    <div className=" d-flex flex-column align-items-center mt-3">
+        <h1>{ name }</h1>
         <div className="profile">
           <div className="profile-image">
             <img src={image} alt={name} />
@@ -61,10 +53,7 @@ export default function Character({ data }) {
           <Link href="/">
              <button className="btn btn-secondary m-2">Volver</button> 
           </Link>
-        </p>
-      </main>
-
-      
+        </p>     
     </div>
   )
 }

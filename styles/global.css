@@ -6,25 +6,42 @@ html {
 
 body {
   font-family: sans-serif;
-  padding: 10px 20px;
   line-height: 1.6;
 }
-
-.header-nav ul {
+.header-nav  {
   margin: 0;
-  padding: 0;
+  padding: 5rem;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover !important;
+  background-position:bottom;
+  overflow: hidden;
+  height: 80vh;
   list-style: none;
+  background-image: url('https://res.cloudinary.com/dbv6dgwez/image/upload/v1684846613/RickMorty/r_m_wallpaper_bukdib.jpg');
+}
+.header-nav h1{
+  color: aliceblue;
+  margin: 20px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 3rem;
 }
 
 .header-nav a {
-  color: #a7a7a7;
+  color: white;
   margin-right: 10px;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
+  text-decoration: none;
 }
 
 .header-nav a.active {
-  color: #222;
+  color: whitesmoke;
+  background-color: #999;
+  padding: 5px;
+  list-style: none;
+  text-decoration: none;
 }
 
 .site-footer {
@@ -34,37 +51,25 @@ body {
   color: #999;
   font-size: 0.75rem;
 }
+/* home page */
 
-.button {
-  background-color: blue;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-  color: white;
-  font-weight: bold;
+.img-card{
+  width: 15rem !important;
 }
-
-.title {
-  font-weight: normal;
-  font-size: 3rem;
-  margin: 32px 0;
-  line-height: 1;
+.img-card:hover {
+  box-shadow: 2px 2px 4px #4d4c4cb8;
+  
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.name-character {
+text-decoration: none;
+color: rgb(144, 0, 255);
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+
+.buscador{
+  display: flex;
+  width: fit-content;
 }
 
 /* Character styles  */
@@ -73,10 +78,18 @@ body {
   display: flex;
   margin-top: 2em;
 }
-@media (max-width: 600px) {
+
+@media (max-width: 740px) {
   .profile {
     flex-direction: column;
   }
+  .header-nav h1{
+font-size: 1.2rem;
+margin: 0;
+  }
+  .header-nav a{
+    font-size: 1rem;
+      }
 }
 .profile-image {
   margin-right: 2em;
