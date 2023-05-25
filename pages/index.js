@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import { FaSearch } from "react-icons/fa";
-import { BiRefresh } from "react-icons/bi";
 import Link from 'next/link';
 
 const defaultEndpoint = 'https://rickandmortyapi.com/api/character/'
@@ -61,6 +60,7 @@ export default function Home({ data }) {
         setResults(nextData.results);
         return;
       }
+      // Aca mantenemos el array de los primeros, y listamos los nuevos resultados debajo. 
       setResults(prev => {
         return [
           ...prev,
