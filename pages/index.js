@@ -1,8 +1,10 @@
 
-
+import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { FaSearch } from "react-icons/fa";
 import Link from 'next/link';
+import Header from '../components/header';
+
 
 const defaultEndpoint = 'https://rickandmortyapi.com/api/character/'
 
@@ -24,6 +26,7 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ data }) {
+
   // destructuramos toda la info que viene de data, y descoponemos los objetos.
   const { info, results: defaultResults = [] } = data;
 
@@ -101,7 +104,8 @@ export default function Home({ data }) {
 
 
   return (
-    <div className='container'>
+    <div>
+      <Header/>
       <div className='d-flex justify-content-center mt-3'>
         <form className='buscador' onChange={handleOnChangeSearch}>
           <input className="form-control me-2" name="characters" type="search" placeholder="Buscar" aria-label="Search" />

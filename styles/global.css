@@ -51,6 +51,7 @@ body {
   color: #999;
   font-size: 0.75rem;
 }
+
 /* home page */
 
 .img-card{
@@ -62,7 +63,7 @@ body {
 }
 
 .name-character {
-text-decoration: none;
+text-decoration: none !important;
 color: rgb(144, 0, 255);
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
