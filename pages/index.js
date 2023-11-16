@@ -105,15 +105,20 @@ export default function Home({ data }) {
 
   return (
     <div>
-      <Header/>
+      <Header />
       <div className='d-flex justify-content-center mt-3'>
         <form className='buscador' onChange={handleOnChangeSearch}>
           <input className="form-control me-2" name="characters" type="search" placeholder="Buscar" aria-label="Search" />
-          <button className="btn btn-outline-success" type="submit"><FaSearch /></button>
+          <button className="btn btn-outline-success" disabled><FaSearch /></button>
         </form>
       </div>
+      {!results && (
+        <div className='text-center'>
+         <b>Character not found :(</b> 
+        </div>
+      )}
       <div className="row justify-content-center p-2">
-        {results.map(result => {
+        {results?.map(result => {
           const { id, name, image } = result;
           return (
             <div key={id} className="col-12 col-md-6 col-xl-4">
